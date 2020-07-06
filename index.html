@@ -1,64 +1,61 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+    <head>
+        <title>Tic-Tac-Toe AI</title>
+        <link rel = 'stylesheet' type = 'text/css' href = 'TTT.css'>
+    </head>
 
-<head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="TTT.css">
-    <meta charset="utf-8" />
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-        </div>
+    <body>
+        <div class = 'main-container'>
+            <div class='board'>
+                <!-- data-indx following cell divs represents cell index in 1D array representation -->
+                <row>
+                    <div class='cell' data-indx="0"></div>
+                    <div class='cell' data-indx="1"></div>
+                    <div class='cell' data-indx="2"></div>
+                </row>
+                <row>
+                    <div class='cell' data-indx="3"></div>
+                    <div class='cell' data-indx="4"></div>
+                    <div class='cell' data-indx="5"></div>
+                </row>
+                <row>
+                    <div class='cell' data-indx="6"></div>
+                    <div class='cell' data-indx="7"></div>
+                    <div class='cell' data-indx="8"></div>
+                </row>
+            </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                
+            <div class = 'control'>
+                <!-- div.intial displays the starting controls -->
+                <div class = 'intial'>
+                    <div class='difficulty'>
+                        <span class='level not-selected' id="Level 1">Level 1</span>
+                        <span class='level not-selected' id="Level 2">Level 2</span>
+                        <span class='level not-selected' id="Level 3">Level 3</span>
+                        <span class='level not-selected' id="Level 4">Level 4</span>
+                        <span class='level not-selected' id="Infinite">Infinite</span>
+                    </div>
+
+                    <div class='start'> Start </div>
+                </div>
+
+                <!-- div.ingame displays in-game messages and controls -->
+                <div class = 'ingame' id="human">It's your turn ...</div>
+                <div class = 'ingame' id="ai">
+                    <div class='ingame' id="robot"></div>
+                        <p>Wait for it ...</p>
+                    </div>
+                <div class = 'ingame' id="won">You won !</div>
+                <div class = 'ingame' id="lost">You lost !</div>
+                <div class = 'ingame' id="draw">It's a Draw</div>
             </div>
         </div>
-    </nav>
-</head>
 
-<body>
-    <div id="container">
-    
-   <div id="sidebar_wrap">
-    <div id="sidebar">
-      <h1>Let's play<br>Tic-Tac-Toe</h1>
-      <div id="characters">
-        <img src="https://www.gamedesigning.org/wp-content/uploads/2016/12/Megaman.jpg"> v/s<img src="https://image.shutterstock.com/image-vector/angry-boy-dressed-masked-villain-260nw-1716797338.jpg">
-      </div>
-      
-      <div class="field">
-          <label>Depth</label>
-          <div class="depth_choices" id="depth">
-            <ul>
-              <li data-value="1">1</li>
-              <li data-value="2">2</li>
-              <li data-value="3">3</li>
-              <li data-value="4">4</li>
-              <li data-value="-1" class="active">Unlimited</li>
-              </ul>
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Starting Player</label>
-          <div class="starting_player_choices" id="starting_player">
-            <ul>
-              <li data-value="1" class="active">Human</li>
-              <li data-value="0">Computer</li>
-            </ul>
-          </div>
-        </div>
-        <button id="newgame">New Game</button>
-        <p><a href="https://github.com/CherryJain03/MINCS-Microsoft-Project">View on Github</a></p>
-   
-    </div>
-   </div>
-  
-         <script src="minimax.js"></script>
-    <script src="sketch.js"></script>
-</body>
-
+        <script src = "scripts/jquery-1.10.1.min.js"></script>
+        <script src = "scripts/ui.js"></script>
+        <script src = "scripts/game.js"></script>
+        <script src = "scripts/ai.js"></script>
+        <script src = "scripts/control.js"></script>
+    </body>
 </html>
