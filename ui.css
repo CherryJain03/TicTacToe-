@@ -1,22 +1,26 @@
 body {
     margin: 0;
-background-color:lightgray;
+background-image: url(https://github.com/CherryJain03/MINCS-Microsoft-Project/blob/master/Mars_bluebackground.png?raw=true)  ;
+background-position: 370px;
+
+background-position-x: center;
+background-position-y: top;
  }
 
 .main-container {
     margin: 0 auto;
     height: 100%;
     width: 900px;
-    margin-top: 50px;
+    margin-top: 90px;
 }
 
 .board {
     height: 420px;
     width: 420px;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100px;
     height: 100px;
-    background-color: #0a0a0a;
+    
     line-height: 100px;
     text-align: center;
     border-radius: 50px;
@@ -86,7 +90,7 @@ background-color:lightgray;
    
     background-color: grey;
       
-    padding: 10px 26px;
+    padding: 3px 25px;
         border-radius: 2px;
         color: #ffffff;
         font-family: 'Gloria Hallelujah', cursive;
@@ -124,9 +128,9 @@ background-color:lightgray;
 .start {
    
 
-        background-color: purple;
+        background-color:orangered;
         border: none;
-        padding: 13px 26px;
+        padding: 6px 26px;
         border-radius: 2px;
         color: #ffffff;
         font-family: 'Gloria Hallelujah', cursive;
