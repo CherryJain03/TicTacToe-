@@ -97,6 +97,7 @@ var AI = function(level) {
             var availablePositions = state.emptyCells();
 
             //enumerate next available states using the info form available positions
+
             var availableNextStates = availablePositions.map(function(pos) {
                 var action = new AIAction(pos);
 
@@ -129,6 +130,7 @@ var AI = function(level) {
      * private function: make the ai player take a blind move
      * that is: choose the cell to place its symbol randomly
      * @param turn [String]: the player to play, either X or O
+     * 
      */
     function takeABlindMove(turn) {
         var available = game.currentState.emptyCells();
@@ -347,7 +349,8 @@ var AI = function(level) {
      * public function: notify the ai player that it's its turn
      * @param turn [String]: the player to play, either X or O
      */
-    this.notify = function(turn) {
+    
+     this.notify = function(turn) {
         switch(levelOfIntelligence) {
             //invoke the desired behavior based on the level chosen
             case "Level 1": takeABlindMove(turn); break;
